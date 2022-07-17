@@ -2,13 +2,29 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
-/[Ll]ogs/
-/[Uu]ser[Ss]ettings/
+/1day/[Ll]ibrary/
+/1day/[Tt]emp/
+/1day/[Oo]bj/
+/1day/[Bb]uild/
+/1day/[Bb]uilds/
+/1day/[Ll]ogs/
+/1day/[Uu]ser[Ss]ettings/
+
+/2day/[Ll]ibrary/
+/2day/[Tt]emp/
+/2day/[Oo]bj/
+/2day/[Bb]uild/
+/2day/[Bb]uilds/
+/2day/[Ll]ogs/
+/2day/[Uu]ser[Ss]ettings/
+
+/완성본/[Ll]ibrary/
+/완성본/[Tt]emp/
+/완성본/[Oo]bj/
+/완성본/[Bb]uild/
+/완성본/[Bb]uilds/
+/완성본/[Ll]ogs/
+/완성본/[Uu]ser[Ss]ettings/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
