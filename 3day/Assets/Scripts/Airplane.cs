@@ -20,24 +20,26 @@ public class Airplane : MonoBehaviour
     {
         if (collision.gameObject.name == "Terrain")
         {
-            Rigidbody rb = GetComponent<Rigidbody>();
-            rb.useGravity = true;
+            Destroy();
+        }
+    }
 
-            // 9. 气惯 饶贸府
-            var obj = transform.Find("DestroyFlame").gameObject;
-            obj.SetActive(true);
+    public void Destroy()
+    {
+        Rigidbody rb = GetComponent<Rigidbody>();
+        rb.useGravity = true;
 
-            obj = transform.Find("Flame").gameObject;
-            obj.SetActive(false);
+        // 9. 气惯 饶贸府
+        transform.Find("DestroyFlame").gameObject.SetActive(true);
+        transform.Find("Flame").gameObject.SetActive(false);
+        transform.Find("Flame2").gameObject.SetActive(false);
 
-            obj = transform.Find("Flame2").gameObject;
-            obj.SetActive(false);
-
-            for(int i = 0; i < this.transform.childCount; i++)
+        for (int i = 0; i < this.transform.childCount; i++)
+        {
+            GameObject go = this.transform.GetChild(i).gameObject;
+            if (go.name == "Main Camera") continue;
+            if (go.GetComponent<Rigidbody>() == null)
             {
-                GameObject go = this.transform.GetChild(i).gameObject;
-                if (go.name == "Main Camera") continue;
-
                 go.AddComponent<Rigidbody>();
             }
         }
